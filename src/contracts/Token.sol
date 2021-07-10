@@ -1,10 +1,10 @@
 pragma solidity ^0.5.0;
 
 contract Token {
-    string  public name = "Udcv Token";
-    string  public symbol = "UDCV";
-    uint256 public totalSupply = 10000;
-    uint8   public decimals = 18;
+    string  public name = "Undercover Token";
+    string  public symbol = "UCT";
+    uint256 public totalSupply = 10000000000000;
+    uint8   public decimals = 9;
 
     event Transfer(
         address indexed _from,

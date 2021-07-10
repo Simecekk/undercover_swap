@@ -5,10 +5,10 @@ module.exports = async function(deployer) {
   await deployer.deploy(Token);
   const token = await Token.deployed()
 
-  await deployer.deploy(UndercoverSwap);
+  await deployer.deploy(UndercoverSwap, token.address);
   const undercoverSwap = await UndercoverSwap.deployed()
 
-  // Transfer all UDCV tokens to UndercoverSwap
-  await token.transfer(undercoverSwap.address, '10000')
+  // Transfer all UCT tokens to UndercoverSwap address
+  await token.transfer(undercoverSwap.address, '10000000000000')
 
 };
